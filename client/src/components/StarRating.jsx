@@ -1,0 +1,15 @@
+import React from 'react'
+import { assets } from '../assets/assets'
+
+const StarRating = ({rating=4}) => {
+  return (
+    <>
+    {Array(5).fill(0).map((_, index) => (
+        <img src={index < rating ? assets.starIconFilled : assets.starIconOutlined} alt="star" key={index} 
+        className='w-4.5 h-4.5'/>
+        ))}
+    </>
+  )
+}
+
+export default StarRating
